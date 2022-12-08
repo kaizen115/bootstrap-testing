@@ -1,0 +1,39 @@
+html {
+    font-size: 62.5%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 6.4rem;
+}
+
+.nav {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.nav-last {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.logo {
+    max-width: 10rem;
+}
