@@ -160,7 +160,7 @@ a {
     opacity: 0.9;
     border-radius: 0 0 1rem 1rem;
     box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
-    max-width: 34rem;
+    max-width: 28rem;
 }
 
 .hero-content-2 {
@@ -177,8 +177,8 @@ a {
 }
 
 .hero-img {
-    height: 32rem;
-    max-width: 34rem;
+    height: 28rem;
+    max-width: 28rem;
     border-radius: 1rem 1rem 0 0;
     box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
     opacity: 0.9;
@@ -193,17 +193,17 @@ a {
 }
 
 .hero-title {
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-transform: uppercase
 }
 
 .hero-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-transform: lowercase;
 }
 
 .btn-hero {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 /* --------------------------------- */
