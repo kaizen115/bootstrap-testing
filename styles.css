@@ -20,6 +20,11 @@ a {
     text-decoration: none;
 }
 
+:root {
+    --feat1: #102128ea;
+    --feat2: #301934d8;
+}
+
 /* --------------------------------- */
 /* NAV */
 /* --------------------------------- */
@@ -153,9 +158,10 @@ a {
 .hero-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.2rem;
     color: #212529;
-    background-color: #fff5f5;
+    background-color: #fff;
     padding: 2rem 4.6rem;
     opacity: 0.9;
     border-radius: 0 0 1rem 1rem;
@@ -204,15 +210,133 @@ a {
 
 .btn-hero {
     font-size: 1.2rem;
+    padding: 0.75rem 2rem 0 2rem;
 }
 
 /* --------------------------------- */
 /* Music */
 /* --------------------------------- */
 
+.music-section {
+    height: 150vh;
+    padding: 8rem;
+    padding-right: 14rem;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    row-gap: 4rem;
+    margin-left: 1.6rem;
+}  
+
+.img-box {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.msc-img {
+    max-width: 24rem;
+    min-height: 24rem;
+    display: block;
+    border-radius: 1rem;
+    border: 0.2rem solid #dee2e6;
+    box-shadow: 0.1rem 0.1rem 1rem 0.1rem #fff;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--feat1), var(--feat2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.img-overlay > * {
+    transform: translateY(2rem);
+    transition: transform 0.3s;
+}
+
+.img-overlay:hover,
+.msc-img:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.img-overlay:hover > * {
+    transform: translateY(0);
+}
+
+.img-text {
+    position: absolute;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #fff;
+}
+
 /* --------------------------------- */
 /* Merch */
 /* --------------------------------- */
+
+.merch-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.merch-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    color: #212529;
+    background-color: #fff;
+    padding: 2rem 4.6rem;
+    opacity: 0.9;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
+    width: 32rem;
+}
+
+.merch-img {
+    height: 38rem;
+    width: 32rem;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0.1rem 0.1rem 2rem 0.1rem #fff;
+    opacity: 0.9;
+    background-size: cover;
+    border-bottom: 0.1rem solid #212529;
+}
+
+.merch-title {
+    font-size: 2rem;
+    text-transform: uppercase
+}
+
+.merch-text {
+    font-size: 1.4rem;
+    text-transform: lowercase;
+}
+
+.btn-merch {
+    font-size: 1.2rem;
+    padding: 0.75rem 4rem 0 4rem;
+}
 
 /* --------------------------------- */
 /* Contact */
@@ -223,13 +347,13 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     gap: 4rem;
 }
 
 .newsletter-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .newsletter-title-container {
@@ -303,7 +427,8 @@ a {
 
 .social-imgs {
     display: flex;
-    gap: 4rem;
+    justify-content: center;
+    gap: 2.8rem;
     background-color: #fff;
     padding: 2rem 4rem;
     border-radius: 1rem;
@@ -318,4 +443,175 @@ a {
 .social-icon:hover {
     scale: 1.1;
     transition: 0.2s;
+}
+
+/* ------------------------- */
+
+@media(max-width:768px){
+
+    .nav-container {
+        padding: 1rem 2rem;
+    }
+
+    .navbar {
+        gap: 2rem;
+    }
+
+    .nav {
+        font-size: 1.6rem;
+        padding: 0.25rem 1.2rem;
+    }
+
+    .hero {
+        margin: 8rem;
+    }
+    
+    .hero-img-2 {
+        max-width: 28rem;
+    }
+
+
+    .enter-section {
+        padding: 0;
+        
+    }
+
+    .enter-container {
+        border-radius: 0.5rem;
+        max-width: 28rem;
+        height: 48rem;
+        gap: 4rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .enter-logo {
+        border-radius: 0.5rem;
+        display: none;
+    }
+
+    .enter-title {
+        font-size: 3rem;
+    }
+
+    .enter-text {
+        font-size: 1.8rem;
+    }
+
+    .enter-btn {
+        padding: 0.25rem 2rem;
+    }
+
+    /* ---------------------- */
+
+    .contact-container {
+        margin: 12rem 0rem;
+    }
+
+    .newsletter-container {
+    }
+
+    .newsletter-title {
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .newsletter-form {
+        padding: 4rem 0;
+        max-width: 48rem;
+    }
+
+    .newsletter-input {
+        max-width: 26rem;
+    }
+
+
+
+    .socials-container {
+        max-width: 48rem;
+    }
+
+    .social-imgs {
+        gap: 4.8rem;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+    }
+
+
+}
+
+@media(max-width:490px) {
+
+    .enter-section {
+        padding-top: 0;
+        
+    }
+
+    .enter-container {
+        border-radius: 0.5rem;
+        max-width: 28rem;
+        height: 24rem;
+        gap: 4rem;
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .enter-logo {
+        border-radius: 0.5rem;
+        display: none;
+    }
+
+    .enter-title {
+        font-size: 3rem;
+    }
+
+    .enter-text {
+        font-size: 1.8rem;
+    }
+
+    .enter-btn {
+        padding: 0.25rem 2rem;
+    }
+
+    .contact-container {
+        margin: 8rem 2rem;
+    }
+    
+    .newsletter-container {
+        padding-top: 4rem;
+    }
+    
+    .newsletter-title {
+        padding: 0;
+        font-size: 2rem;
+    }
+    
+    .newsletter-form {
+        padding: 4rem 0;
+        max-width: 32rem;
+    }
+    
+    .newsletter-input {
+        max-width: 26rem;
+    }
+
+    .contact-container {
+        margin: 0rem 0rem;
+    }
+
+    .socials-container {
+        max-width: 32rem;
+    }
+
+    .social-imgs {
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding: 1rem 2rem;
+    }
+
+    .social-icon {
+    }
 }
